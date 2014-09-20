@@ -61,6 +61,10 @@ class BusinessesController < ApplicationController
     end
   end
 
+  def feedback
+      @feedback = Feedback.where(business_id: params[:id])
+      
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_business
