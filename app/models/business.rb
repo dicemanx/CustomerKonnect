@@ -1,3 +1,3 @@
 class Business < ActiveRecord::Base
-	has_many: :feedbacks
+	has_many :feedbacks
 end

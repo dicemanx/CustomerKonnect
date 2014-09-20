@@ -1,7 +1,7 @@
 <h1>Welcome to CustomerKonnect</h1>
 <p>Welcome welcome!</p>
-
-<div class="select-company"></div>
-<p>Please choose a company:</p>
-<%=  %>
-
+<p>Some introductory bullshit</p>
+<%= link_to  %>
+<div class="select-business"></div>
+<p>Please choose a business:</p>
+<%= select_tag(:business_id, options_for_select(@business_options)) %>

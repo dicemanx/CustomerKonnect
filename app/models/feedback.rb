@@ -1,4 +1,4 @@
 class Feedback < ActiveRecord::Base
-	belongs_to: :shoppers
-	belongs_to: :businesses
+	belongs_to :shoppers
+	belongs_to :businesses
 end
