@@ -1,4 +1,5 @@
 class Feedback < ActiveRecord::Base
-	belongs_to :shoppers
-	belongs_to :businesses
+	belongs_to :shopper
+	belongs_to :business
+	accepts_nested_attributes_for :shopper
 end

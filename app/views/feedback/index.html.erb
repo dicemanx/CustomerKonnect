@@ -1,0 +1,5 @@
+<% @feedbacks.each do |feedback| %>
+<p><%= feedback.description %></p>
+<p><%= feedback.shopper.email %></p>
+<p><%= feedback.business.name %></p>
+<% end %>

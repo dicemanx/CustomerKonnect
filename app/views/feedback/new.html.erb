@@ -1,0 +1,15 @@
+<h1>Create a new complaint</h1>
+<div class="select-business"></div>
+
+<%= form_for @feedback, url: {action: "create"}, html: {class: "create-feedback"} do |f| %>
+<p><%= f.label "Choose a business" %></p>
+<p><%= f.select(:business_id, options_for_select(@business_options)) %></p>
+<p>Please describe you grievance here, and we'll contact the company directly to figure out a possible solution</p>
+<p><%= f.text_area :description, size: "60x12" %></p>
+<p><%= f.fields_for :shoppers do |ff| %></p>
+<p>Your email: <%= ff.text_field :email  %></p>
+<p>Your phone number: <%= ff.text_field :phone_number %></p>
+<% end %>
+<p><%= f.submit "Complain!" %></p>
+<% end %>
+
