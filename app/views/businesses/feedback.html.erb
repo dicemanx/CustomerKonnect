@@ -1,0 +1,29 @@
+<h1>Listing Feedback</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @feedbacks.each do |feedback| %>
+      <tr>
+        <td><%= business.name %></td>
+        <td><%= feedback.description %></td>
+        <td><%= feedback.status %></td>
+        <td><%= link_to 'Show', show_business_path(business) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
