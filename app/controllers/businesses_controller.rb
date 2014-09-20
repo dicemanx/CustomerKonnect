@@ -1,5 +1,5 @@
 class BusinessesController < ApplicationController
-  before_action :set_business, only: [:show, :edit, :update, :destroy]
+  before_action :set_business, only: [:show, :edit, :update, :destroy, :feedback]
 
   # GET /businesses
   # GET /businesses.json
@@ -62,8 +62,8 @@ class BusinessesController < ApplicationController
   end
 
   def feedback
-      @feedback = Feedback.where(business_id: params[:id])
-      
+      @feedbacks = Feedback.where(business_id: params[:id])
+      @business = Business.find(params[:id])
   end
   private
     # Use callbacks to share common setup or constraints between actions.
