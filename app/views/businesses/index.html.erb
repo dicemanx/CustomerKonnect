@@ -19,8 +19,7 @@
           <td>&nbsp;<%= business.name %>&nbsp;</td>
           <td>&nbsp;<%= business.address %>&nbsp;</td>
           <td>&nbsp;<%= business.email %>&nbsp;</td>
-          <!--<td>&nbsp;<%= link_to 'Show', show_business_path(business) %>&nbsp;</td>-->
-          <td>&nbsp;<%= link_to 'See feedback', get_feedback_business_path(business) %>&nbsp;</td>
+          <td>&nbsp;<%= link_to 'Show', show_business_path(business) %>&nbsp;</td>
           <td>&nbsp;<%= link_to 'Edit', edit_business_path(business) %>&nbsp;</td>
           <td>&nbsp;<%= link_to 'Delete', destroy_business_path(business), method: :delete, data: { confirm: 'Are you sure?' } %>&nbsp;</td>
         </tr>
