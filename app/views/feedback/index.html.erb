@@ -1,7 +1,7 @@
 <div style="margin-left: 80px">
 	<% @feedbacks.each do |feedback| %>
 	<p>Feedback Description: <%= feedback.description %></p>
-	<p>Shopper's Email: <%= feedback.shopper.email %></p>
+	<p>Email: <%= feedback.shopper.email %></p>
 	<p>Business: <%= feedback.business.name %></p>
 	<% end %>
 </div>
