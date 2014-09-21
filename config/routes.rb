@@ -10,5 +10,7 @@ CustomerKonnect::Application.routes.draw do
   match '/businesses/destroy/:id', to: 'businesses#destroy', via: "delete", as: :destroy_business
   match '/businesses/feedback/:id', to: 'businesses#feedback', via: "get", as: :get_feedback_business
   get "feedback/new"
+  match 'shoppers/contact', to: 'shoppers#contact', via: "get", as: :contact
+  match 'shoppers/about', to: 'shoppers#about', via: "get", as: :about
   resources :feedback
 end
