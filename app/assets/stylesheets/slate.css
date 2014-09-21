@@ -4,3 +4,7 @@
  *= require slate/loader
  *= require slate/bootswatch
 */
+#feedback_business_id 
+{
+	color: black;
+}
