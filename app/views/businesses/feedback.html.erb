@@ -17,6 +17,9 @@
         <td><b>Feedback given at:</b> <%= feedback.created_at.to_s(:short) %></td>
         
       </tr>
+      <tr>
+        <td><%= link_to 'Reply', reply_path %></td>
+      </tr>
       <br>
 
     <% end %>

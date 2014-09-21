@@ -11,6 +11,7 @@ CustomerKonnect::Application.routes.draw do
   match '/businesses/feedback/:id', to: 'businesses#feedback', via: "get", as: :get_feedback_business
   match 'shoppers/contact', to: 'shoppers#contact', via: "get", as: :contact
   match 'shoppers/about', to: 'shoppers#about', via: "get", as: :about
+  match 'businesses/reply', to: 'businesses#reply', via: "get", as: :reply
   get "feedback/new", as: :give_feedback
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#new", :as => "log_in"
