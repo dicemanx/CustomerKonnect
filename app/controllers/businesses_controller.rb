@@ -17,6 +17,8 @@ class BusinessesController < ApplicationController
     @business = Business.new
   end
 
+  def login
+  end
   # GET /businesses/1/edit
   def edit
   end
@@ -73,6 +75,6 @@ class BusinessesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def business_params
-      params.require(:business).permit(:name, :address, :email)
+      params.require(:business).permit(:name, :address, :email,:password)
     end
 end
