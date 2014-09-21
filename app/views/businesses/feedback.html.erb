@@ -1,24 +1,29 @@
-<div id="feedback">
+
+<div id="feedback" style="margin-left: 80px">
 <h1>Listing Feedback</h1>
 
-<table>
-  <tbody>
+
     <% @feedbacks.each do |feedback| %>
+    <table>
+  <tbody>
       <tr>
-        <td><%= @business.name %></td>
+        <td><b>Business name:</b> <%= @business.name %></td>
       </tr>
       <tr>
         
-        <td><%= feedback.description %></td>
-        <td><%= feedback.status %></td>
+        <td><b>Feedback Description:</b> <%= feedback.description %></td>
+      </tr>
+      <tr>
+        <td><b>Feedback given at:</b> <%= feedback.created_at.to_s(:short) %></td>
         
       </tr>
+      <br>
 
     <% end %>
   </tbody>
 </table>
 <br>
- <td><%= link_to 'Show', show_business_path(@business) %></td>
+ <td><%= link_to 'Back', show_business_path(@business) %></td>
 <br>
 </div>
 

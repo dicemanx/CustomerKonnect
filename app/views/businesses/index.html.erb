@@ -1,31 +1,33 @@
-<h1>Listing businesses</h1>
+<div style="margin-left: 80px">
+  <h1>Listing businesses</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Email</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @businesses.each do |business| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= business.name %></td>
-        <td><%= business.address %></td>
-        <td><%= business.email %></td>
-        <td><%= link_to 'Show', show_business_path(business) %></td>
-        <td><%= link_to 'Edit', edit_business_path(business) %></td>
-        <td><%= link_to 'Destroy', destroy_business_path(business), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @businesses.each do |business| %>
+        <tr>
+          <td>&nbsp;<%= business.name %>&nbsp;</td>
+          <td>&nbsp;<%= business.address %>&nbsp;</td>
+          <td>&nbsp;<%= business.email %>&nbsp;</td>
+          <!--<td>&nbsp;<%= link_to 'Show', show_business_path(business) %>&nbsp;</td>-->
+          <td>&nbsp;<%= link_to 'See feedback', get_feedback_business_path(business) %>&nbsp;</td>
+          <td>&nbsp;<%= link_to 'Edit', edit_business_path(business) %>&nbsp;</td>
+          <td>&nbsp;<%= link_to 'Delete', destroy_business_path(business), method: :delete, data: { confirm: 'Are you sure?' } %>&nbsp;</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
+  <br>
 
+</div>
